@@ -3,6 +3,26 @@ html {
     width: 100%;
   }
 
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    #winowApplications {
+      padding: 8px;
+    }
+  
+    #projects, #contact, #aboutMe, #resume {
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  }
+
   body background-image {
     background-image: url('images/wallpaper3.jpg'); 
     background-size: cover; 
