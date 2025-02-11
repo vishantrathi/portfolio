@@ -53,3 +53,35 @@ html {
   a {
     text-decoration: none;
   }
+
+  #projects {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#projectshandle {
+    padding: 8px;
+}
+
+.project-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin-bottom: 16px;
+}
+
+.project-title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.project-description {
+    margin: 4px 0;
+    color: #555;
+}
+
+.project-link {
+    color: #4E75FF;
+    text-decoration: none;
+}
