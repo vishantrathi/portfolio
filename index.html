@@ -128,7 +128,7 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
   <div id="resumeHandle" style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
     <div onclick="closeElement(document.getElementById('resume'))" style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px"></div>
     <p>My Resume<br>
-    <mark>Note:Non-techies,Please click "Open the Document directly".</mark></p>
+    <mark>Note:Dear Non-techies,Please click "Open the Document directly".</mark></p>
     <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
   </div>
   <iframe src="https://drive.google.com/file/d/1uO6sYzKzfcpGYm1w_bszAGzXd6PgSy1p/view?usp=sharing" style="width: 100%; height: 400px;" frameborder="0"></iframe>
@@ -157,19 +157,27 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
         <p class="thomas_message">Feel free to also send me an email at <a href="mailto: vishantrathigurjar@gmail.com"
             style="color: #CE41FF">vishantrathigurjar@gmail.com</a> (for any professional purposes)
         </p>
+        <p class="thomas_message">It really works—give it a try!</p>
       </div>
+      
 
-      <div
-        style="flex-direction: row; align-items: center; margin-bottom: 16px; justify-content: space-between; display: flex;">
-        <input type="text" id="messageInput" onchange="awaitingResponse = false"
-          style="padding: 6px 10px; width: calc(100%); border: 1px solid #ccc; border-radius: 4px; font-size: 14px; outline: none; vertical-align: middle;" />
-        <div
-          style="display: flex; align-items: center; justify-content: center; font-size: 14px; margin-left: 16px; outline: none;">
-          <p style="margin: 0; cursor: pointer; color: #CE41FF" onclick="sendMessage()">Send</p>
+            <!-- Message Form -->
+            <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Message from Contact Form">
+                <input type="text" name="name" placeholder="Your Name" required
+                    style="width: 100%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+                <input type="email" name="email" placeholder="Your Email" required
+                    style="width: 100%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+                <textarea name="message" placeholder="Type your message here..." required
+                    style="width: 100%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc; height: 100px;"></textarea>
+                <button type="submit"
+                    style="background-color: #CE41FF; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">
+                    Send Message
+                </button>
+            </form>
         </div>
-      </div>
     </div>
-  </div>
+</div>
   <!-- End of contact window template -->
 
   <!-- About Me window template -->
