@@ -93,7 +93,7 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
   </div>
 
   <!-- Projects window template -->
-  <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
+  <!-- <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
     style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
     <div id="projectshandle"
       style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 96%">
@@ -119,7 +119,40 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
         </div>
       </div>
     </div>
-  </div> 
+  </div>  -->
+  <div id="projects" onclick="tapWindow(document.getElementById('projects'))"
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none; max-height: 80vh; overflow: hidden;">
+    <div id="projectshandle"
+      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%; padding: 8px;">
+      <div onclick="closeElement(document.getElementById('projects'))"
+        style="margin-right:2px; cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 50%;"></div>
+      <p style="margin: 0;">My Projects</p>
+      <div style="height: 16px; width: 16px; border-radius: 16px;"></div>
+    </div>
+    <div style="width: calc(100% - 32px); height: calc(80vh - 50px); overflow-y: auto; padding: 16px;">
+      <b><a href="https://github.com/vishantrathi/" target="_blank">My GitHub Repository</a></b>
+      <div id="myProjects">
+        <div id="WoolConnect" style="margin-bottom: 16px;">
+          <h3><b>WoolConnect</b></h3>
+          <p>WoolConnect is an app-based platform designed to streamline the Indian wool sector by providing tools for wool producers, traders, and artisans</p>
+          <a href="https://github.com/vishantrathi/woolconnect" target="_blank">GitHub Repository</a> | 
+          <a href="https://vishantrathi.github.io/woolconnect/" target="_blank">Live Demo</a>
+          <div style="margin-top: 10px;">
+            <iframe src="https://vishantrathi.github.io/woolconnect/" width="100%" height="300" style="border: none; border-radius: 8px;"></iframe>
+          </div>
+        </div>
+        <div id="project2">
+          <h3>Project 2:My Portfolio</h3>
+          <p>If you're reading this line, it means you've discovered my second project. Give yourself a pat on the back, explorer! 🌟</p>
+          <a href="https://github.com/vishantrathi/portfolio" target="_blank">GitHub Repository</a> | 
+          <a href="http://vishantrathi.me/" target="_blank">Live Demo</a>
+          <div style="margin-top: 10px;">
+            <iframe src="https://vishantrathi.me/" width="100%" height="300" style="border: none; border-radius: 8px;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
   <!-- End of projects window template -->
 
   <!-- Resume window template -->
