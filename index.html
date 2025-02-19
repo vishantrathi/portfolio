@@ -2,10 +2,19 @@
 <html>
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7RXHS8B5D"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R7RXHS8B5D');
+</script>
   <link rel="icon" type="image/x-icon" href="Assets\5c62ff5af75d6440f9ee1d8e41fb49f6-removebg-preview.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vishant's OS - A unique portfolio showcasing innovative projects.">
+  <meta name="description" content="Vishant's OS - A unique portfolio showcasing innovative projects with enhanced security features and best practices.">
   <meta property="og:title" content="Vishant's OS">
   <meta property="og:description" content="Explore my projects and resume.">
   <meta property="og:image" content="Assets/Assets\IMG_20250210_100022_851.jpg">
@@ -83,6 +92,15 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
 <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Resume</p>
 </div>
 
+<!-- Gallery Section -->
+<div id="gallery" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; flex-direction: column; align-items: center; z-index: 1000; background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+  <img id="galleryImage" src="Assets/image1.jpg" alt="Gallery Image" style="width: 500px; height: auto; border-radius: 16px; margin-bottom: 16px;">
+  <div style="display: flex; justify-content: space-between; width: 100%;">
+      <button onclick="prevImage()" style="padding: 10px; border: none; background-color: #CE41FF; color: white; border-radius: 8px; cursor: pointer;">&#10094; Prev</button>
+      <button onclick="nextImage()" style="padding: 10px; border: none; background-color: #CE41FF; color: white; border-radius: 8px; cursor: pointer;">Next &#10095;</button>
+  </div>
+</div>
+
 <!-- GTA Social Club icon(under develpment in my head,so don't touch it)
 
 <div id="GTASocialClubIcon" onclick="openIcon('gtaSocialClub')"
@@ -138,7 +156,7 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
     <mark>Note:Dear Non-techies,Please click "Open the Document directly".</mark></p>
     <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
   </div>
-  <iframe src="https://drive.google.com/file/d/1uO6sYzKzfcpGYm1w_bszAGzXd6PgSy1p/view?usp=sharing" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+  <iframe src="https://drive.google.com/file/d/1jMoghzWYeMfRW0Kg3iFqceajZpq_u7Mx/view?usp=drive_link" style="width: 100%; height: 400px;" frameborder="0"></iframe>
 </div>
 
 <!-- End of resume window template -->

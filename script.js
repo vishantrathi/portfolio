@@ -169,7 +169,3 @@ function setDate() {
 }
 setDate();
 
-
-
-
-
