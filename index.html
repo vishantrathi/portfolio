@@ -153,44 +153,33 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
 
   <!-- Contact window template -->
   <div id="contact" onclick="tapWindow(document.getElementById('contact'))"
-    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none">
+    style="align-items: center; border: 1px solid black; border-radius: 16px; background-color: #fff; width: 500px; position: absolute; justify-content: center; flex-direction: column; display: none; max-height: 80vh; overflow: hidden;">
+    
     <div id="contacthandle"
-      style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
-      <div onclick="closeElement(document.getElementById('contact'))"
-        style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
-      </div>
-      <p>Message Vishant</p>
-      <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
-    </div>
-    <div style="width: calc(100% - 32px);">
-      <div id="chat">
-        <p class="vishant_message">
-          Hey there, welcome to my inbox.</p>
-        <img src="Assets/IMG-20250211-WA0027.jpg"
-          style="width: 150px; border-radius: 16px" />
-        <p class="vishant_message">You can send texts here & they'll ping on my phone instantly<br>It really works—give it a try!</p>
-        <p class="vishant_message">Feel free to also send me an email at <a href="mailto: vishantrathigurjar@gmail.com"
-            style="color: #CE41FF">vishantrathigurjar@gmail.com</a><br> (for any professional purposes)
-        </p>
-        
-      </div>
-      
-
-            <!-- Message Form -->
-            <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="New Message from Contact Form">
-                <input type="text" name="name" placeholder="Your Name" required
-                    style="width: 98%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
-                <input type="email" name="email" placeholder="Your Email" required
-                    style="width: 98%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
-                <textarea name="message" placeholder="Type your message here..." required
-                    style="width: 98%; padding: 8px; margin: 8px 0px 0px 0px; border-radius: 8px; border: 1px solid #ccc; height: 100px;"></textarea>
-                <button type="submit"
-                    style="background-color: #CE41FF; color: white; padding: 10px 10px 10px 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">
-                    Send Message
-                </button>
-            </form>
+        style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
+        <div onclick="closeElement(document.getElementById('contact'))"
+            style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 16px; margin-left: 16px">
         </div>
+        <p>Message Vishant</p>
+        <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
+    </div>
+    
+    <div style="width: calc(100% - 32px); height: 400px; overflow-y: auto;">
+        <div id="chat">
+            <p class="vishant_message">Hey there, welcome to my inbox.</p>
+            <img src="Assets/IMG-20250211-WA0027.jpg" style="width: 150px; border-radius: 16px" />
+            <p class="vishant_message">You can send texts here & they'll ping on my phone instantly<br>It really works—give it a try!</p>
+            <p class="vishant_message">Feel free to also send me an email at <a href="mailto: vishantrathigurjar@gmail.com" style="color: #CE41FF">vishantrathigurjar@gmail.com</a><br> (for any professional purposes)</p>
+        </div>
+
+        <!-- Message Form -->
+        <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Message from Contact Form">
+            <input type="text" name="name" placeholder="Your Name" required style="width: 98%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+            <input type="email" name="email" placeholder="Your Email" required style="width: 98%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+            <textarea name="message" placeholder="Type your message here..." required style="width: 98%; padding: 8px; margin: 8px 0px 0px 0px; border-radius: 8px; border: 1px solid #ccc; height: 100px;"></textarea>
+            <button type="submit" style="background-color: #CE41FF; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">Send Message</button>
+        </form>
     </div>
 </div>
   <div id="aboutMe" onclick="tapWindow(document.getElementById('aboutMe'))"
