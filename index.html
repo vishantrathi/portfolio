@@ -179,6 +179,42 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
             <p class="vishant_message">Feel free to also send me an email at <a href="mailto: vishantrathigurjar@gmail.com" style="color: #CE41FF">vishantrathigurjar@gmail.com</a><br> (for any professional purposes)</p>
         </div>
 
+        <div style="padding: 16px; background-color: #f0f0f0; border-radius: 9px; margin-top: 16px;">
+          <style>
+            #contact form input[type="text"],
+            #contact form input[type="email"],
+            #contact form textarea {
+              width: 100%;
+              margin-bottom: 12px;
+              padding: 8px 12px;
+              border: 1.5px solid #000;
+              border-radius: 6px;
+              font-size: 15px;
+              box-sizing: border-box;
+              font-family: inherit;
+            }
+            #contact form textarea {
+              min-height: 80px;
+              resize: vertical;
+            }
+            #contact form button[type="submit"] {
+              display: block;
+              margin: 18px auto 0 auto;
+              background: #CE41FF;
+              color: #fff;
+              border: none;
+              border-radius: 8px;
+              padding: 10px 32px;
+              font-size: 16px;
+              font-weight: 600;
+              cursor: pointer;
+              transition: background 0.2s;
+            }
+            #contact form button[type="submit"]:hover {
+              background: #a82ed6;
+            }
+          </style>
+        <p style="font-weight: bold; margin-bottom: 8px;">Send me a message:</p>
         <!-- Message Form -->
         <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST" data-captcha="true">
           <!-- Real fields -->
@@ -187,8 +223,8 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
           <textarea name="message" required placeholder="Your Message"></textarea>
           
           <!-- Protection fields -->
-          <input type="text" name="_honey" style="display:none"> <!-- Honeypot -->
-          <input type="hidden" name="_template" value="table">   <!-- Tabular format -->
+          <input type="text" name="_honey" style="display:none"> <!-- honey trap of spams -->
+          <input type="hidden" name="_template" value="table">   <!-- Tabular format  -->
         
           <!-- OPTIONAL: Safe redirect -->
           <input type="hidden" name="_next" value="https://vishantrathi.github.io/portfolio/thank-you.html">
@@ -196,6 +232,7 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
           
           <button type="submit">Send</button>
         </form>
+        </div>
         
     </div>
 </div>
