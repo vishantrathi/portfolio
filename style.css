@@ -7,6 +7,9 @@ html {
     body {
       flex-direction: column;
       height: auto;
+      max-width: 95vw;
+      width: 100%;
+
     }
   
     #winowApplications {

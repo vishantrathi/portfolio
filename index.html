@@ -10,13 +10,14 @@
   gtag('js', new Date());
   gtag('config', 'G-R7RXHS8B5D');
 </script>
-  <link rel="icon" type="image/x-icon" href="Assets\5c62ff5af75d6440f9ee1d8e41fb49f6-removebg-preview.png">
+  <link rel="icon" type="image/x-icon" href="Assets/5c62ff5af75d6440f9ee1d8e41fb49f6-removebg-preview.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Vishant's OS - A unique portfolio showcasing innovative projects with enhanced security features and best practices.">
   <meta property="og:title" content="Vishant's OS">
   <meta property="og:description" content="Explore my projects and resume.">
-  <meta property="og:image" content="Assets/Assets\IMG_20250210_100022_851.jpg">
+  <meta property="og:image" content="Assets/IMG_20250210_100022_851.jpg">
+
   <title>Vishant's OS</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -150,10 +151,9 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
   <div id="resumeHandle" style="display: flex; align-items: center; background-color: #F6F6F6; border-radius: 16px 16px 0px 0px; justify-content: space-between; width: 100%">
     <div onclick="closeElement(document.getElementById('resume'))" style="cursor: pointer; height: 16px; width: 16px; background-color: red; border-radius: 50%; margin: 10px 10px 10px 10px;"></div>
     <p>My Resume<br>
-    <mark>Note:Dear Non-techies,Please click "Open the Document directly".</mark></p>
     <div style="height: 16px; width: 16px; border-radius: 16px; margin-right: 16px"></div>
   </div>
-  <iframe src="https://drive.google.com/file/d/1jMoghzWYeMfRW0Kg3iFqceajZpq_u7Mx/view?usp=drive_link" style="width: 100%; height: 400px;" frameborder="0"></iframe>
+  <iframe src="https://drive.google.com/file/d/1jMoghzWYeMfRW0Kg3iFqceajZpq_u7Mx/preview" style="width: 100%; height: 400px;" frameborder="0"></iframe>
 </div>
 
 <!-- End of resume window template -->
@@ -180,13 +180,22 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
         </div>
 
         <!-- Message Form -->
-        <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New Message from Contact Form">
-            <input type="text" name="name" placeholder="Your Name" required style="width: 98%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
-            <input type="email" name="email" placeholder="Your Email" required style="width: 98%; padding: 8px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
-            <textarea name="message" placeholder="Type your message here..." required style="width: 98%; padding: 8px; margin: 8px 0px 0px 0px; border-radius: 8px; border: 1px solid #ccc; height: 100px;"></textarea>
-            <button type="submit" style="background-color: #CE41FF; color: white; padding: 10px; border: none; border-radius: 8px; cursor: pointer; width: 100%;">Send Message</button>
+        <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST" data-captcha="true">
+          <!-- Real fields -->
+          <input type="text" name="name" required placeholder="Your Name">
+          <input type="email" name="email" required placeholder="Your Email">
+          <textarea name="message" required placeholder="Your Message"></textarea>
+          
+          <!-- Protection fields -->
+          <input type="text" name="_honey" style="display:none"> <!-- Honeypot -->
+          <input type="hidden" name="_template" value="table">   <!-- Tabular format -->
+        
+          <!-- OPTIONAL: Safe redirect -->
+          <input type="hidden" name="_next" value="C:\Users\visha\OneDrive\Desktop\portfolio\thank-you.html">
+          
+          <button type="submit">Send</button>
         </form>
+        
     </div>
 </div>
   <div id="aboutMe" onclick="tapWindow(document.getElementById('aboutMe'))"
@@ -251,6 +260,30 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
   </div>
   <!-- End of welcome message overlay -->
 
-  <script src="script.js"></script>
+  <script src="script.js">
+    let isDragging = false;
+    let offsetX, offsetY;
+
+function startDrag(e) {
+    isDragging = true;
+    offsetX = e.clientX - myWindow.offsetLeft;
+    offsetY = e.clientY - myWindow.offsetTop;
+    document.addEventListener('mousemove', dragWindow);
+    document.addEventListener('mouseup', stopDrag);
+}
+
+function dragWindow(e) {
+    if (isDragging) {
+        myWindow.style.left = (e.clientX - offsetX) + 'px';
+        myWindow.style.top = (e.clientY - offsetY) + 'px';
+    }
+}
+
+function stopDrag() {
+    isDragging = false;
+    document.removeEventListener('mousemove', dragWindow);
+    document.removeEventListener('mouseup', stopDrag);
+}
+  </script>
 </body>
 </html>
