@@ -17,7 +17,6 @@
   <meta property="og:title" content="Vishant's OS">
   <meta property="og:description" content="Explore my projects and resume.">
   <meta property="og:image" content="Assets/IMG_20250210_100022_851.jpg">
-
   <title>Vishant's OS</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -45,7 +44,6 @@
         onmouseout="this.style.boxShadow = 'none'">
         Play Music
       </p>
-
       <p id="timeElement"
       style="margin-right: 16px; background-color: rgba(256, 256, 256, 0.125); padding: 4px 12px; border-radius: 16px;">
       Time
@@ -92,14 +90,15 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
 <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Resume</p>
 </div>
 
-<!-- Gallery Section -->
-<div id="gallery" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: none; flex-direction: column; align-items: center; z-index: 1000; background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 16px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-  <img id="galleryImage" src="Assets/image1.jpg" alt="Gallery Image" style="width: 500px; height: auto; border-radius: 16px; margin-bottom: 16px;">
-  <div style="display: flex; justify-content: space-between; width: 100%;">
-      <button onclick="prevImage()" style="padding: 10px; border: none; background-color: #CE41FF; color: white; border-radius: 8px; cursor: pointer;">&#10094; Prev</button>
-      <button onclick="nextImage()" style="padding: 10px; border: none; background-color: #CE41FF; color: white; border-radius: 8px; cursor: pointer;">Next &#10095;</button>
-  </div>
-</div>
+
+
+    <!-- Gallery icon -->
+    <div id="galleryIcon" onclick="openGallery()"
+      style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-content; padding: 8px; display: flex; flex-direction: column;">
+      <img style="height: 64px; width: 64px;  border-radius: 16px; margin: 0px"
+        src="Assets/gallery (1).png" />
+      <p style="margin: 0px; font-size: 12px; margin-top: 4px; font-weight: 500; color: #fff">Gallery</p>
+    </div>
 
   </div>
 
@@ -135,7 +134,7 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
           <h3>Project 3: ENREACH SOLUTION</h3>
           <p>I developed the frontend of the ENREACH SOLUTION website, a platform dedicated to digital forensics and cyber fraud investigation. Utilizing modern web technologies, I crafted an intuitive and responsive user interface that effectively presents the firm's comprehensive services, including audio/video analysis, cloud forensics, malware forensics, and social media analysis. The design emphasizes clarity and accessibility, ensuring users can easily navigate and understand the solutions offered.</p>
           <a href="https://github.com/vishantrathi/CYBER" target="_blank">GitHub Repository</a> | 
-          <a href="https://vishantrathi.github.io/CYBER/" target="_blank">Live Demo</a>
+          <a href="https:www.enreachsolution.com" target="_blank">Live Demo</a>
           <div style="margin-top: 10px;">
             <iframe src="https://en-reach-solutions.vercel.app/" width="100%" height="300" style="border: none; border-radius: 8px;"></iframe>
           </div>
@@ -216,24 +215,13 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
           </style>
         <p style="font-weight: bold; margin-bottom: 8px;">Send me a message:</p>
         <!-- Message Form -->
-        <form action="https://formsubmit.co/vishantrathigurjar@gmail.com" method="POST" data-captcha="true">
-          <!-- Real fields -->
-          <input type="text" name="name" required placeholder="Your Name">
-          <input type="email" name="email" required placeholder="Your Email">
-          <textarea name="message" required placeholder="Your Message"></textarea>
-          
-          <!-- Protection fields -->
-          <input type="text" name="_honey" style="display:none"> <!-- honey trap of spams -->
-          <input type="hidden" name="_template" value="table">   <!-- Tabular format  -->
-        
-          <!-- OPTIONAL: Safe redirect -->
-          <input type="hidden" name="_next" value="https://vishantrathi.github.io/portfolio/thank-you.html">
-
-          
-          <button type="submit">Send</button>
+        <form id="contact-form">
+        <input type="text" name="from_name" required placeholder="Your Name">
+        <input type="email" name="from_email" required placeholder="Your Email">
+        <textarea name="message" required placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
         </form>
         </div>
-        
     </div>
 </div>
   <div id="aboutMe" onclick="tapWindow(document.getElementById('aboutMe'))"
@@ -298,30 +286,11 @@ style="cursor: pointer; align-items: center; border-radius: 8px; width: fit-cont
   </div>
   <!-- End of welcome message overlay -->
 
-  <script src="script.js">
-    let isDragging = false;
-    let offsetX, offsetY;
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("RJgdS4Rka_cfCUjot"); //public key
+</script>
+<script src="script.js"></script>
 
-function startDrag(e) {
-    isDragging = true;
-    offsetX = e.clientX - myWindow.offsetLeft;
-    offsetY = e.clientY - myWindow.offsetTop;
-    document.addEventListener('mousemove', dragWindow);
-    document.addEventListener('mouseup', stopDrag);
-}
-
-function dragWindow(e) {
-    if (isDragging) {
-        myWindow.style.left = (e.clientX - offsetX) + 'px';
-        myWindow.style.top = (e.clientY - offsetY) + 'px';
-    }
-}
-
-function stopDrag() {
-    isDragging = false;
-    document.removeEventListener('mousemove', dragWindow);
-    document.removeEventListener('mouseup', stopDrag);
-}
-  </script>
 </body>
 </html>
