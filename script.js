@@ -20,7 +20,7 @@ function sendMessage() {
     paragraph.classList.add("my_message");
     document.getElementById('chat').appendChild(paragraph);
     awaitingResponse = true;
-    sendSMS(messageContent); // Optional: handle this on your end
+    sendSMS(messageContent);
   }
 }
 
